@@ -597,3 +597,37 @@ body.dark-mode {
     display: block;
 }
 
+/* Hide the menu by default */
+#menu {
+    display: none;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    #menu {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #f8f9fa; /* Example background color */
+        border-top: 1px solid #ddd;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    #menu ul {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    #menu ul li {
+        text-align: center;
+    }
+
+    #menu ul li img {
+        width: 24px; /* Set icon size */
+        height: auto;
+    }
+}
