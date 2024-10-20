@@ -631,3 +631,8 @@ body.dark-mode {
         height: auto;
     }
 }
+@media (max-width: 600px) {
+    .container {
+        margin-bottom: 10px;
+    }
+}
