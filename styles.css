@@ -606,7 +606,7 @@ body.dark-mode {
 @media (max-width: 768px) {
     #menu {
         display: block;
-        position: sticky;
+        position: fixed;
         bottom: 0;
         width: 100%;
         background-color: #f8f9fa; /* Example background color */
