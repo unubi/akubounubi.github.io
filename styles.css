@@ -633,6 +633,6 @@ body.dark-mode {
 }
 @media (max-width: 600px) {
     .container {
-        margin-bottom: 25px;
+        margin-bottom: 40px;
     }
 }
