@@ -1,0 +1,599 @@
+/* General styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+body {
+    font-family: 'Inter';
+    margin: 0;
+    padding: 0;
+    background-color: white; /* Light mode */
+    color: black;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    font-weight: 400;
+    font-size: 14px;
+    
+}
+
+/* Dark mode */
+body.dark-mode {
+    background-color: #121212; /* Dark mode background */
+    color: #eaeaea; /* Light text for dark mode */
+}
+
+/* Sidebar styles */
+#sidebar {
+    background-color: white;
+    color: black;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Media Query for small screens */
+/*@media (max-width: 768px) {
+    #sidebar {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        justify-content: space-around;
+       /* align-items: center;
+        background-color: #2c2c54; /* Adjust background color */
+        /*padding: 10px 0;
+        z-index: 999;
+        flex-direction: row; /* Make it a horizontal flex layout */
+    /*}
+
+    #sidebar a {
+        flex: 1;
+        text-align: center;
+        color: white; /* Ensure text/icon color stands out */
+      /*  padding: 5px;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column; /* Align icon and text vertically */
+     /*   align-items: center;
+        justify-content: center;
+    }*/
+
+   /* #sidebar a:hover {
+        background-color: #5a5a89; /* Add hover effect for better interaction */
+        /*border-radius: 50%;
+  /*  }
+
+    /* Ensure icons and text are aligned in one row */
+   /* #sidebar i {
+        font-size: 24px; /* Adjust icon size */
+   /* }
+
+    #sidebar span {
+        font-size: 12px; /* Adjust text size if needed */
+  /*  }
+}
+*/
+
+#markReadBtn{
+    background-color: #8576FF;
+}
+#deleteBtn{
+    background-color: #F43F5E;
+    
+}
+#editBtn{
+    background-color: #E2E8F0;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sidebar li {
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+#sidebar li:hover {
+    background-color: #444;
+}
+
+.profile-section {
+    text-align: center;
+}
+
+.profile-section img {
+    border-radius: 50%;
+}
+
+.profile-section {
+    text-align: center; /* Center the text below the image */
+}
+
+.rounded-image {
+    width: 100px; /* Set the width */
+    height: 100px; /* Set the height equal to width for a circle */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image covers the space without distortion */
+}
+
+
+.badge {
+    background-color: red;
+    color: white;
+    border-radius: 12px;
+    padding: 2px 5px;
+}
+
+/* Main Content styles */
+.main-content {
+    margin-left: 250px; /* Default margin for larger screens */
+    padding: 20px;      /* Default padding */
+    height: 100vh;      /* Full height */
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0; /* Remove left margin on smaller screens */
+        padding: 10px;  /* Adjust padding for smaller screens */
+        height: auto;    /* Allow height to adjust based on content */
+    }
+}
+
+
+.top-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.chart-container {
+    width: 50%;
+    border: 1px;
+}
+
+.news-carousel {
+    width: 50%;
+    border: 1px;
+}
+
+.table-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#eventTable {
+    width: 100%;
+    border-collapse: collapse;
+    border: 0px;
+}
+
+#eventTable th, #eventTable td {
+    border: 0px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    color: #334155;
+    font-family: 'Inter';
+}
+
+#eventTable th {
+    background-color: #F1F5F9;
+    color: #64748B;
+}
+#eventTable td{
+    color: #334155;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.rows-selector {
+    margin-top: 10px;
+}
+
+#toggleModeBtn {
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.chart-container {
+    height: 400px; /* Set a fixed height for the chart */
+}
+
+.carousel-item img {
+    height: 100%; /* Make image take full height of carousel */
+    object-fit: cover; /* This maintains aspect ratio and covers the entire area */
+}
+
+.top-section {
+    display: flex; /* Use flex to arrange items side by side */
+}
+
+.carousel-inner {
+    height: 400px /* Ensure carousel takes full height of the container */
+}
+.chart-margin {
+    margin-left: 20px; /* Adjust the value as needed */
+}
+
+.header-container {
+    text-align: left; /* Optional: Align text to the left */
+    padding: 10px; /* Optional: Add some padding */
+    
+}
+
+.logo, .welcome-message {
+    display: inline-block; /* Use inline-block to align elements on the same line */
+    vertical-align: middle; /* Align vertically in the middle */
+    margin-right: 20px; /* Add space between logo and message */
+}
+
+.logo {
+    font-size: 24px; /* Optional: Adjust font size for logo */
+}
+
+.welcome-message {
+    font-size: 16px; /* Optional: Adjust font size for message */
+    font-family: 'Inter';
+    margin-left: 140px;
+}
+@media (max-width: 768px) {
+    .welcome-message {
+        margin-left: 0;
+    }
+}
+
+.page-number {
+    display: inline-block;
+    width: 30px;                /* Width of the circle */
+    height: 30px;               /* Height of the circle */
+    border: 1px solid #007bff; /* Border color */
+    border-radius: 50%;         /* Makes it circular */
+    text-align: center;         /* Centers the text inside */
+    line-height: 30px;          /* Vertically centers the text */
+    margin: 0 5px;              /* Spacing between the page numbers */
+    cursor: pointer;             /* Changes cursor on hover */
+    transition: background-color 0.3s; /* Smooth background transition */
+    font-size: 14px;            /* Adjust font size as needed */
+}
+
+.page-number:hover {
+    background-color: rgba(0, 123, 255, 0.1); /* Light blue on hover */
+}
+
+.page-number.active {
+    background-color: #007bff; /* Active page background */
+    color: white;              /* Active page text color */
+    border-color: #007bff;    /* Same border color as background */
+}
+/* Status styles */
+.status {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: white; /* Default text color */
+}
+
+.status.completed {
+    background-color: #D1FAE5;
+    color: #10B981;
+    border-radius: 100px;
+     
+}
+
+.status.in-progress {
+    background-color: #DBEAFE;
+    color:#3B82F6;
+   
+    border-radius: 100px;
+}
+
+.dot {
+    width: 10px; /* Adjust the size as needed */
+    height: 10px; /* Adjust the size as needed */
+    border-radius: 50%; /* Make it round */
+    margin-right: 5px; /* Space between dot and text */
+}
+
+.completed-dot {
+    color: #10B981; /* Green color for Completed */
+}
+
+.in-progress-dot {
+    color:#3B82F6; /* Blue color for In Progress */
+}
+@media (max-width: 768px) {
+    .cards .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+     
+    }
+}
+
+@media (max-width: 768px) {
+    .top-section {
+        flex-direction: column; /* Stack elements vertically */
+        
+    }
+    .chart-container,
+    #newsCarousel {
+        width: 100%; /* Make each container full width */
+        margin-bottom: 20px; /* Add some spacing between them */
+    }
+}
+@media (max-width: 768px) {
+    .top-section {
+        flex-direction: column; /* Stack elements vertically */
+    }
+    .chart-container,
+    #newsCarousel {
+        width: 100%; /* Make each container full width */
+        margin-bottom: 20px; /* Add some spacing between them */
+    }
+}
+@media (max-width: 576px) {
+    .table-actions {
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .table-actions .form-control,
+    .table-actions .form-select,
+    .table-actions .btn {
+        width: 100%; /* Make each input/button full width */
+        margin-bottom: 10px; /* Add spacing between stacked elements */
+    }
+}
+
+/* Sidebar styles */
+#sidebar {
+    width: 250px; /* Default width */
+    height: 100vh; /* Full height */
+    background: #f8f9fa; /* Light background */
+    position: fixed; /* Fixed position */
+    left: 0; /* Align to the left */
+    top: 18; /* Align to the top */
+    transition: transform 0.3s ease; /* Smooth transition */
+    transform: translateX(0); /* Visible by default */
+    z-index: 1000; /* Ensure it is above other content */
+    font-family: 'Inter';
+    font-size: 14px;
+    font-weight: 400;
+    color: #334155;
+    border: #F1F5F9;
+}
+
+/* Hide the sidebar by default on small screens */
+#sidebar.hide {
+    transform: translateX(-100%); /* Move it out of view */
+}
+
+/* Hamburger icon styles */
+.hamburger-icon {
+    display: none; /* Hidden by default (shown on smaller screens) */
+    cursor: pointer; /* Change cursor to pointer */
+    padding: 10px; /* Padding for better clickable area */
+    position: fixed; /* Fixed position */
+    right: 20px; /* Position from the right */
+    top: 20px; /* Position from the top */
+    z-index: 1001; /* Above the sidebar */
+}
+
+/* Bar styles for the hamburger icon */
+.bar {
+    width: 30px; /* Width of the bars */
+    height: 4px; /* Height of the bars */
+    background: #333; /* Color of the bars */
+    margin: 5px 0; /* Spacing between bars */
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    #sidebar {
+        transform: translateX(-100%); /* Hidden by default */
+        width: 200px; /* Slightly smaller sidebar on mobile */
+    }
+
+    .hamburger-icon {
+        display: block; /* Show hamburger icon on small screens */
+    }
+
+    #sidebar.show {
+        transform: translateX(0); /* Show sidebar on toggle */
+    }
+
+    #sidebar ul {
+        display: none; /* Hide menu items initially */
+    }
+
+    #sidebar.show ul {
+        display: block; /* Show menu items when sidebar is toggled */
+    }
+}
+
+/* Styles for larger screens (default) */
+@media (min-width: 769px) {
+    #sidebar {
+        transform: translateX(0); /* Sidebar is always visible on larger screens */
+    }
+
+    .hamburger-icon {
+        display: none; /* Hide hamburger icon on larger screens */
+    }
+
+    #sidebar ul {
+        display: flex; /* Show menu items on larger screens */
+        flex-direction: column; /* Stack items vertically */
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
+    }
+
+    #sidebar li {
+        padding: 10px; /* Add padding to list items */
+        display: flex; /* Flexbox for better alignment */
+        align-items: center; /* Center items vertically */
+    }
+
+    #sidebar img {
+        margin-right: 10px; /* Spacing between icon and text */
+    }
+}
+#sidebar.collapsed {
+    width: 80px; /* Sidebar shrinks when collapsed */
+}
+
+/* Menu list styles */
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar ul li {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+}
+
+#sidebar ul li img {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+}
+
+/* Hide the menu text in collapsed state */
+#sidebar.collapsed .menu-text {
+    display: none;
+}
+
+/* Profile section styles */
+.profile-section {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.profile-section img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+/* Toggle button for collapsing the sidebar */
+/*.toggle-sidebar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+#toggleSidebar {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+/* Adjustments for small screens */
+/*@media (max-width: 768px) {
+    #sidebar {
+        width: 80px; /* Default to collapsed state on small screens */
+  /*  }
+
+    #sidebar.expanded {
+        width: 250px; /* Expandable on small screens */
+   /* }
+}*/
+/*.main-content table {
+    width: 100%;
+    overflow-x: auto;
+}*/
+/* Default styles for modal buttons (inline by default) */
+.modal-footer .btn {
+    margin: 5px;
+}
+
+/* For smaller screens (max-width: 576px), stack buttons vertically */
+@media (max-width: 576px) {
+    .modal-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center the buttons */
+    }
+
+    .modal-footer .btn {
+        width: 100%; /* Make each button take up the full width */
+        margin-bottom: 10px; /* Add space between the buttons */
+    }
+}
+.rmonth{
+    font-family: 'Inter';
+    color: #000000;
+    font-weight: 500;
+    font-size: 18px;
+}
+#sidebar {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between; /* Space between items */
+    height: 100vh; /* Full height of the viewport */
+}
+
+#sidebar ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    flex: 1; /* Allow ul to grow and take remaining space */
+}
+
+#sidebar li {
+    display: flex;
+    align-items: center; /* Center the items vertically */
+    padding: 10px; /* Add some padding */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 576px) {
+    #sidebar {
+        justify-content: flex-end; /* Align items at the bottom */
+    }
+
+    #sidebar ul {
+        flex-direction: column; /* Stack items in a column */
+    }
+
+    #sidebar li {
+        justify-content: center; /* Center items horizontally */
+        text-align: center; /* Center text */
+    }
+}
+.accordion {
+    margin-top: 20px;
+}
+
+.accordion-item {
+    border: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+.accordion-header {
+    background: #f1f1f1;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.accordion-body {
+    display: none;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.accordion-body.show {
+    display: block;
+}
+
